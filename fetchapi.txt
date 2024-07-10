@@ -1,0 +1,50 @@
+The Most IMport Topic of webDevelopment
+
+ 1. User--->ClientArea -----> JSON ---->Server--->Database
+ 2. User--->ClientArea <-----JSON-----Server
+
+New Technology
+JSON = Javascript Object Notation i.e JS Object {}
+
+JSON = Array OF Object [{},{},{},{}]
+
+
+====>>>>API(Application programing InterFace)
+Request Method
+    1. GET
+    2. POST
+
+====>>>>ENDPOINT = API URLd:\Fullstackdevlopment\API CALL XMLHttp\notes2.txt
+
+API Tools (TO SEE DATA)
+    1. POSTMAN(API Testing Tool)
+
+REST (RESPRESATATIONAL STATE TRANSFER) API(Application Programing InterFace)
+
+.FAKE REST API
+
+Old Technology
+XML = Extensible Markup Language
+XMLHttpREquest CLass
+
+API USing in This Document
+
+website Name:- JSON placeholder
+
+Resources
+JSONPlaceholder comes with a set of 6 common resources:
+
+/posts=https://jsonplaceholder.typicode.com/posts
+/photos=https://jsonplaceholder.typicode.com/photos
+/albums=https://jsonplaceholder.typicode.com/albums(Today API)
+/User=https://jsonplaceholder.typicode.com/users
+
+//InterView Question 
+1.how to convert json string into json Object
+ANS:- JSON String ------> JSON.parse() -----> JSON Object
+
+
+In Pure JS,
+There are 2 techniques available;
+1.XMLHttpREquest
+2.FetchAPI
