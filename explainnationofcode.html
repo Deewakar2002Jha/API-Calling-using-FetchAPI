@@ -1,0 +1,50 @@
+<script>
+  // Fetch data from API and render table rows
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => {
+    // Loop through each item in the data array
+    data.forEach(item => {
+      // Create a table row element
+      let tr = `
+        <tr>
+          <td>${item.userid}</td>
+          <td>${item.id}</td>
+          <td>${item.title}</td>
+          <td>${item.status}</td>
+          <td><button class="d_viewbtn">View</button></td>
+        </tr>
+      `;
+      // Add the table row to the table body
+      document.querySelector('table > tbody').innerHTML += tr;
+    });
+    console.log(tr); // Log the last table row element
+  })
+  .catch(error => {
+    // Handle API error
+    console.error(error);
+  });
+
+// Add event listener to the whole page
+document.addEventListener('click', function(event) {
+  // Check if the target element is a "View" button
+  if (event.target && event.target.classList[3] === 'd_viewbtn') {
+    // Get the parent table row element
+    let tr = event.target.closest('tr');
+    // Extract data from the table row
+    let title = tr.querySelector('td:nth-child(3)').innerHTML;
+    let status = tr.querySelector('td:nth-child(4)').innerHTML;
+    let userid = tr.querySelector('td:first-child').innerHTML;
+    let id = tr.querySelector('td:nth-child(2)').innerHTML;
+    console.log(status);
+    console.log(userid);
+    console.log(id);
+
+    // Update the modal body with the extracted data
+    document.querySelector('.modal-body > .list-group >li:first-child').innerHTML = userid;
+    document.querySelector('.modal-body > .list-group >li:nth-child(2)').innerHTML = id;
+    document.querySelector('.modal-body > .list-group >li:nth-child(3)').innerHTML = title;
+    document.querySelector('.modal-body > .list-group >li:last-child').innerHTML = status;
+  }
+});
+</script>

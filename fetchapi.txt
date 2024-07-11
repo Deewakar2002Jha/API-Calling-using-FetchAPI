@@ -48,3 +48,5 @@ In Pure JS,
 There are 2 techniques available;
 1.XMLHttpREquest
 2.FetchAPI
+
+used api link /todos=https://jsonplaceholder.typicode.com/todos
