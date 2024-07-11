@@ -84,7 +84,7 @@ document.querySelector('button.mybtn').addEventListener('click',function(){
                                 <button class="btn btn-sm btn-success d_viewbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">View</button>
                                 
                                 <button class="btn btn-sm btn-primary">Edit</button>
-                                <button class="btn btn-sm btn-danger">Delete</button>
+                                <button class="btn btn-sm btn-danger d_delbtn">Delete</button>
                               </td>
                             </tr>`;
                             //data-bs-toggle="modal" data-bs-target="#exampleModal"
@@ -117,6 +117,10 @@ document.querySelector('button.mybtn').addEventListener('click',function(){
       document.querySelector('.modal-body > .list-group >li:nth-child(2)').innerHTML= id;
       document.querySelector('.modal-body > .list-group >li:nth-child(3)').innerHTML= title;
       document.querySelector('.modal-body > .list-group >li:last-child').innerHTML= status;
+      }
+      if(e.target && e.target.classList[3] == 'd_delbtn'){
+        alert('okkkkkkkk');
+        e.target.closest('tr').remove();
       }
       // alert('ok')
       //console.log(e.target.closest('tr').querySelector('td:nth-child(3)').innerHTML);
